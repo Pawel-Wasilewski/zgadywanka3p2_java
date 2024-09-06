@@ -49,35 +49,61 @@ public class Main {
 
             System.out.println("Pochybienie o: " + pochybienie);
 
+            pochybienie = pochybienie / 10;
 
+            switch (pochybienie) {
+                case 0:
+                    System.out.println("było blisko byq");
+                    break;
+                case 1:
+                    System.out.println("wystarczająco");
+                    break;
+                case 2:
+                    System.out.println("Mogło być lepiej");
+                    break;
+                default:
+                    System.out.println("FF 15");
+            }
+
+            /*
+                Inny zapis switcha
+            */
+
+            System.out.println(
+                    switch (pochybienie) {
+                        case 0 -> "Było blisko byq";
+                        case 1 -> "Wystarczająco";
+                        case 2 -> "Mogło być lepiej";
+                        default -> "FF 15";
+                    }
+            );
         }
-        pochybienie = pochybienie / 10;
+        /*
+            Pętla For
+        */
 
-        switch (pochybienie) {
-            case 0:
-                System.out.println("było blisko byq");
+        for (int i = 0; i < 10; i++ ) {
+            System.out.println("podaj liczbę");
+            liczba_docelowa = klawiatura.nextInt();
+            if (liczba_docelowa == wylosowana_liczba) {
+                System.out.println("zgadłeś :D");
                 break;
-            case 1:
-                System.out.println("wystarczająco");
-                break;
-            case 2:
-                System.out.println("Mogło być lepiej");
-                break;
-            default:
-                System.out.println("FF 15");
+            }
         }
 
         /*
-            Inny zapis switcha
+            Pętla While
         */
 
-        System.out.println(
-                switch (pochybienie) {
-                    case 0 -> "Było blisko byq";
-                    case 1 -> "Wystarczająco";
-                    case 2 -> "Mogło być lepiej";
-                    default -> "FF 15";
-                }
-        );
+        System.out.println("Podaj liczbę");
+        liczba_docelowa = klawiatura.nextInt();
+        while (liczba_docelowa != wylosowana_liczba) {
+
+            if (liczba_docelowa > wylosowana_liczba) {
+                System.out.println("Wpisano za dużo");
+            } if (liczba_docelowa < wylosowana_liczba) {
+                System.out.println("Wpisano za mało");
+            }
+        }
     }
 }
