@@ -18,13 +18,13 @@ public class Main {
             - integer
             - kosc
 
-         */
+        */
 
         System.out.println(wylosowana_liczba);
 
         /*
             wczytywanie z klawiatury
-         */
+        */
 
         Scanner klawiatura = new Scanner(System.in);
         System.out.println("Podaj liczbę");
@@ -34,18 +34,41 @@ public class Main {
             If Else itd.
         */
 
+        int pochybienie = 0;
+
         if (liczba_docelowa == wylosowana_liczba) {
-            System.out.println("Zgadłem :D");
+            System.out.println("Zgadłeś :D");
         } else {
-            System.out.println("Nie zgadłem :(");
+            System.out.println("Nie zgadłeś :(");
+
+            /*
+                Zmiana danych - wyrażenia warunkowe
+            */
+
+            pochybienie = liczba_docelowa > wylosowana_liczba ? liczba_docelowa - wylosowana_liczba : wylosowana_liczba - liczba_docelowa;
+
+            System.out.println("Pochybienie o: " + pochybienie);
+
+
+        }
+        pochybienie = pochybienie / 10;
+
+        switch (pochybienie) {
+            case 0:
+                System.out.println("było blisko byq");
+                break;
+            case 1:
+                System.out.println("wystarczająco");
+                break;
+            case 2:
+                System.out.println("Mogło być lepiej");
+                break;
+            default:
+                System.out.println("FF 15");
         }
 
         /*
-            Zmiana danych - wyrażenia warunkowe
+            Inny zapis switcha
         */
-
-        int pochybienie = liczba_docelowa > wylosowana_liczba ? liczba_docelowa - wylosowana_liczba : wylosowana_liczba - liczba_docelowa;
-
-        System.out.println("Pochybienie o: " + pochybienie);
     }
 }
