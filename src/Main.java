@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Heil Hi..");
+        double wylosowana_liczba = Math.random() * 100 + 1;
+        System.out.println(wylosowana_liczba);
     }
 }
