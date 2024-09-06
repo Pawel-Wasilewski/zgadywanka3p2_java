@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int wylosowana_liczba = (int) (Math.random() * 100 + 1);
+
         /*
             rzutowanie danych
 
@@ -18,7 +19,9 @@ public class Main {
             - kosc
 
          */
+
         System.out.println(wylosowana_liczba);
+
         /*
             wczytywanie z klawiatury
          */
@@ -26,5 +29,14 @@ public class Main {
         Scanner klawiatura = new Scanner(System.in);
         System.out.println("Podaj liczbę");
         int liczba_docelowa = klawiatura.nextInt();
+
+        /*
+            If Else itd.
+         */
+        if (liczba_docelowa == wylosowana_liczba) {
+            System.out.println("Zgadłem :D");
+        } else {
+            System.out.println("Nie zgadłem :(");
+        }
     }
 }
