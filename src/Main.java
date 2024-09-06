@@ -70,5 +70,14 @@ public class Main {
         /*
             Inny zapis switcha
         */
+
+        System.out.println(
+                switch (pochybienie) {
+                    case 0 -> "Było blisko byq";
+                    case 1 -> "Wystarczająco";
+                    case 2 -> "Mogło być lepiej";
+                    default -> "FF 15";
+                }
+        );
     }
 }
