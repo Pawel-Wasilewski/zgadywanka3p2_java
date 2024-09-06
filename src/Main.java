@@ -82,28 +82,29 @@ public class Main {
             Pętla For
         */
 
-        for (int i = 0; i < 10; i++ ) {
-            System.out.println("podaj liczbę");
-            liczba_docelowa = klawiatura.nextInt();
-            if (liczba_docelowa == wylosowana_liczba) {
-                System.out.println("zgadłeś :D");
-                break;
+        /*
+            for (int i = 0; i < 10; i++) {
+                System.out.println("podaj liczbę");
+                liczba_docelowa = klawiatura.nextInt();
+                if (liczba_docelowa == wylosowana_liczba) {
+                    System.out.println("zgadłeś :D");
+                    break;
+                }
             }
-        }
-
+        */
         /*
             Pętla While
         */
 
-        System.out.println("Podaj liczbę");
-        liczba_docelowa = klawiatura.nextInt();
-        while (liczba_docelowa != wylosowana_liczba) {
-
+        do {
+            System.out.println("Podaj liczbę");
+            liczba_docelowa = klawiatura.nextInt();
             if (liczba_docelowa > wylosowana_liczba) {
                 System.out.println("Wpisano za dużo");
-            } if (liczba_docelowa < wylosowana_liczba) {
+            } else if (liczba_docelowa < wylosowana_liczba){
                 System.out.println("Wpisano za mało");
             }
-        }
+        } while (liczba_docelowa != wylosowana_liczba);
+        System.out.println("Wygrana");
     }
 }
