@@ -32,11 +32,20 @@ public class Main {
 
         /*
             If Else itd.
-         */
+        */
+
         if (liczba_docelowa == wylosowana_liczba) {
             System.out.println("Zgadłem :D");
         } else {
             System.out.println("Nie zgadłem :(");
         }
+
+        /*
+            Zmiana danych - wyrażenia warunkowe
+        */
+
+        int pochybienie = liczba_docelowa > wylosowana_liczba ? liczba_docelowa - wylosowana_liczba : wylosowana_liczba - liczba_docelowa;
+
+        System.out.println("Pochybienie o: " + pochybienie);
     }
 }
